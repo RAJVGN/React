@@ -1,12 +1,13 @@
 {
   "name": "five",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix testaa",
     "start": "node server",
-    "server": "nodemon server.js"
+    "client": "npm run start --prefix testaa",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -24,5 +25,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "description": ""
 }
